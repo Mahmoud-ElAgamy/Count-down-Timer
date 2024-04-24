@@ -1,4 +1,4 @@
-let countDownDate = new Date().setSeconds(new Date().getSeconds() + 30);
+let countDownDate = new Date().setSeconds(new Date().getSeconds() + 10);
 
 let timerInterval;
 
@@ -40,6 +40,4 @@ const endCountDown = () => {
 };
 
 startCountdown();
-timerInterval = setInterval(() => {
-  startCountdown();
-}, 1000);
+timerInterval = setInterval(startCountdown, 1000);
